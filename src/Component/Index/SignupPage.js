@@ -1,5 +1,10 @@
+import { useState } from "react";
+
 function SignupPage() {
 
+    const [userName,setUserName]=useState("")
+    const [Password,setPassword]=useState("")
+    const [email,setEmail]=useState("")
     
     return (
         <>
