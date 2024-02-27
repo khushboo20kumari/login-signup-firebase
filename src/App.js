@@ -1,20 +1,22 @@
-import {app} from "./firebase"
-import {getDatabase,ref,set} from "firebase/database"
-const db=getDatabase(app)
+import { app } from "./firebase"
+import {getAuth,createUserWithEmailAndPassword} from "firebase/auth"
+const auth = getAuth(app)
 
-function App(){
-  const PutData=()=>{
-    set(ref(db,'user/khushboo'),{
-      id:1,
-      name:"khushboo",
-      age:"18"
-    })
+function App() {
+
+  const OnClickHandler = () => {
+    createUserWithEmailAndPassword(auth,)
   }
-  return(
-    <div className="App">
-      <button className="" onClick={PutData}>save</button>
+  
+  return (
 
+    <div className="App">
+      <input onChange={onChangeHandleusername}></input>
+      <input onChange={onChangeHandlerPassword}></input>
+      <input onChange={onChangeHandlerEmail}></input>
+      <button onClick={OnClickHandler}>save</button>
     </div>
+
   )
 }
 export default App;
