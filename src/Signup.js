@@ -1,12 +1,37 @@
 import { useState } from "react";
+import { app } from './firebase';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+// const auth=getAuth(app)
 function SignupPage() {
+
 
     const [userName, setUserName] = useState("")
     const [password, setPassword] = useState("")
     const [email, setEmail] = useState("")
 
-    const [data, setData] = useState([])
+    // const [data, setData] = useState([])
+    // const auth = getAuth(app)
+
+    const auth = getAuth(app);
+    const OnClickSubmit = () => {
+
+        createUserWithEmailAndPassword(auth, email, password)
+
+            .then((userCredential) => {
+                // Signed up 
+                alert("save")
+                // ...
+            })
+            .catch((error) => {
+                alert("error")
+                // ..
+            });
+    }
+
+
+
+
 
     const OnChangeHandlerUserName = (e) => {
         setUserName(e.target.value)
@@ -20,11 +45,7 @@ function SignupPage() {
         setEmail(e.target.value)
     }
 
-    const OnClickSubmit = () => {
-        createUserWithEmailAndPassword(Auth, email, password).then((value) => {
-            alert("sign up successfully")
-        })
-    }
+
     return (
         <>
             <p>this is Signup component</p>
@@ -36,3 +57,4 @@ function SignupPage() {
     )
 }
 export default SignupPage;
+

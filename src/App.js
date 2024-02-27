@@ -1,13 +1,11 @@
-import SignupPage from './Component/Index/SignupPage';
-
-import './App.css';
-function App() {
-  return (
+import {getDatabase,ref,set} from "firebase/database"
+import {app} from "./firebase";
+const db=getDatabase(app)
+function App(){
+  return(
     <div className="App">
-      <SignupPage/>
-      
-    </div>
-  );
-}
 
+    </div>
+  )
+}
 export default App;
