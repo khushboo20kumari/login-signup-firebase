@@ -1,10 +1,12 @@
 function SignupPage() {
+
+    
     return (
         <>
             <p>this is Signup component</p>
-            <input className="userName"></input>
-            <input className="Password"></input>
-            <input className="Email"></input>
+            <input className="userName" onChange={OnChangeHandlerUserName}></input>
+            <input className="Password" onChange={OnChangeHandlerUserPassword} ></input>
+            <input className="Email" onChange={OnChangeHandlerUserEmail}></input>
         </>
     )
 }
