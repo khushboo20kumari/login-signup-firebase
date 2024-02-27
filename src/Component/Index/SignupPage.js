@@ -21,6 +21,7 @@ function SignupPage() {
     }
     
     const OnClickSubmit=()=>{
+        setData()
         
     }
 
@@ -30,7 +31,7 @@ function SignupPage() {
             <input className="userName" onChange={OnChangeHandlerUserName} value={userName}></input>
             <input className="Password" onChange={OnChangeHandlerUserPassword} value={password}></input>
             <input className="Email" onChange={OnChangeHandlerUserEmail} value={email}></input>
-            <button onClick={OnClickSubmit}></button>
+            <button onClick={OnClickSubmit}>submit</button>
         </>
     )
 }
