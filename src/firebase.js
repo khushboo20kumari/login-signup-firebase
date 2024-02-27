@@ -1,14 +1,17 @@
 import { initializeApp } from "firebase/app";
-const firebaseConfig = {
-    apiKey: "AIzaSyBBskfGVPOo-IxO8lNevB1hibFZEmmA8z0",
-    authDomain: "login-signup-page-56ffc.firebaseapp.com",
-    projectId: "login-signup-page-56ffc",
-    storageBucket: "login-signup-page-56ffc.appspot.com",
-    messagingSenderId: "345246232862",
-    appId: "1:345246232862:web:ec96434a967cd94bbed90f",
-    databaseURL:"https://login-signup-page-56ffc-default-rtdb.firebaseio.com"
-  };
-  
-  // Initialize Firebase
+// import { getDatabase } from "firebase/database";
 
-export  const app = initializeApp(firebaseConfig);
+const firebaseConfig = {
+    apiKey: "AIzaSyBpgbbkgmAOyYkIvqV_8B_wlytVYR2fi3E",
+    authDomain: "login-signup-21baf.firebaseapp.com",
+    projectId: "login-signup-21baf",
+    storageBucket: "login-signup-21baf.appspot.com",
+    messagingSenderId: "266711013496",
+    appId: "1:266711013496:web:c2877aadded0bd4689358d",
+    databaseURL:"https://login-signup-21baf-default-rtdb.firebaseio.com",
+  }
+
+
+export const app = initializeApp(firebaseConfig);
+
+// const database = getDatabase(app);

@@ -1,9 +1,18 @@
+import {app} from "./firebase"
 import {getDatabase,ref,set} from "firebase/database"
-import {app} from "./firebase";
 const db=getDatabase(app)
+
 function App(){
+  const PutData=()=>{
+    set(ref(db,'user/khushboo'),{
+      id:1,
+      name:"khushboo",
+      age:"18"
+    })
+  }
   return(
     <div className="App">
+      <button className="" onClick={PutData}>save</button>
 
     </div>
   )
