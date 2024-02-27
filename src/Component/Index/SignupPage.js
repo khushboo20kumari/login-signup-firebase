@@ -1,30 +1,30 @@
 import { useState } from "react";
-
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 function SignupPage() {
 
-    const [userName,setUserName]=useState("")
-    const [password,setPassword]=useState("")
-    const [email,setEmail]=useState("")
+    const [userName, setUserName] = useState("")
+    const [password, setPassword] = useState("")
+    const [email, setEmail] = useState("")
 
-    const [data,setData]=useState([])
+    const [data, setData] = useState([])
 
-    const OnChangeHandlerUserName=(e)=>{
+    const OnChangeHandlerUserName = (e) => {
         setUserName(e.target.value)
     }
 
-    const OnChangeHandlerUserPassword=(e)=>{
+    const OnChangeHandlerUserPassword = (e) => {
         setPassword(e.target.value)
     }
 
-    const OnChangeHandlerUserEmail=(e)=>{
+    const OnChangeHandlerUserEmail = (e) => {
         setEmail(e.target.value)
     }
-    
-    const OnClickSubmit=()=>{
-        setData()
-        
-    }
 
+    const OnClickSubmit = () => {
+        createUserWithEmailAndPassword(Auth, email, password).then((value) => {
+            alert("sign up successfully")
+        })
+    }
     return (
         <>
             <p>this is Signup component</p>
